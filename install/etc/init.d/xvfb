@@ -1,8 +1,11 @@
 #!/bin/sh
 
 XVFB=/usr/bin/Xvfb
-XVFBARGS=":99 -screen 0 1024x768x24 -fbdir /var/run -ac"
+#XVFBARGS=":21 -screen 0 1280x1024x24 -extension RANDR -fbdir /var/run -ac"
+XVFBARGS=":21 -screen 0 1280x1024x24 -fbdir /var/run -ac"
 PIDFILE=/var/run/xvfb.pid
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/
+
 case "$1" in
   start)
     echo -n "Starting virtual X frame buffer: Xvfb"
