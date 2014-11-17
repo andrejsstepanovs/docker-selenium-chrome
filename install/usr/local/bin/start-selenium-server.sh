@@ -6,4 +6,4 @@ export DISPLAY=:21
 export DISPLAY=:21
 
 echo "Starting Selenium ..."
-java -jar /srv/selenium-server-standalone-2.44.0.jar -Dwebdriver.chrome.driver=/srv/chromedriver -timeout=10 -browserTimeout=300
+java -Xms512m -Xmx512m -jar /srv/selenium-server-standalone-2.44.0.jar -Dwebdriver.chrome.driver=/srv/chromedriver -timeout=300 -browserTimeout=300
